@@ -1,0 +1,10 @@
+<% @tasks.each do |task|%>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> Номер задачи:<%= task.id%></h5>
+    <p class="card-text"><%= task.body%></p>
+    <h6 href="#" class="card-subtitle mb-2 text-muted"> Начал:<%= task.begin%></h6>
+    <h6 href="#" class="card-subtitle mb-2 text-muted">Закончил:<%= task.end%></h6>
+  </div>
+</div>
+<% end %>

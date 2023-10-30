@@ -1,0 +1,20 @@
+<h1> Новая задача</h1>
+
+<%= form_with model: @task do |f|%>
+    <div>
+    <%= f.label :body %>
+    <%= f.text_field :body, required: true, minlegth: 2 %>
+    </div>
+
+    <div>
+    <%= f.label :begin %>
+    <%= f.time_field :begin%>
+    </div>
+
+    <div>
+    <%= f.label :end%>
+    <%= f.time_field :end%>
+    </div>
+
+    <%= f.submit "Добавить задачку", class: "btn btn-warning"%>
+<%end %>
